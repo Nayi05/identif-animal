@@ -1,0 +1,35 @@
+git checkout main
+% Preguntas
+ prop(1,' es un canido',p).
+ prop(2,' es grande',p).
+ prop(3, ' es pequenno',p).
+ prop(4,' es domestico',p).
+ prop(5,' es fiel a su amo',p).
+ prop(6,' es un felido',p).
+ prop(7,' es un ave',p).
+ prop(8,' habla',p).
+ git add sistema_inferencia.pl
+ git commit -m
+% Intermadios
+ prop(11,'grande o pequenno',i).
+git commit -m 
+git push origin documentacion
+% Objetivos
+ prop(101,' es un PERRO.',i).
+ prop(102,' es un GATO.',i).
+ prop(103,' es una COTORRA.',i).
+ % Reglas
+regla(1,o,[2,3],11,1.0).
+regla(2,y,[1,11,4],101,0.6).
+regla(3,y,[5],101,0.8).
+regla(4,y,[6,3,4],102,0.8).
+regla(5,y,[7,3,8],103,1.0).
+clase(1,objetivos,[101,102,103]).
+git push origin tests
+main:- nl, write('CONSULTA'),
+    nl,nl,
+    borrar_pesos,
+    write('Entre el ID de la prop. a investigar: '),read(I),
+    peso_prop(I,W),
+    nl,nl, write(' RESULTADO'),
+    reportar_prop(I).
